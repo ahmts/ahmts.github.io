@@ -1,0 +1,185 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #2c2f3f;
+  color: #ffffff;
+  margin: 0;
+  padding-top: 70px; /* Adjusted padding to accommodate fixed navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+body.fade-out {
+  opacity: 0;
+}
+#warning-message {
+  display: none;
+  text-align-last: center;
+}
+#close-warning {
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #333333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#close-warning:hover {
+    background-color: #3f69b3;
+    color: #ffffff;
+}
+
+@media (max-width: 870px) and (max-height: 870px) {
+  #warning-message {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 99999;
+  }
+}
+
+
+.navbar {
+  position: fixed;
+    top: 0;
+    left: 20%; /* Ensure navbar starts from the left edge */
+    right: 20%; /* Ensure navbar extends till the right edge */
+    z-index: 1000;
+    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.3);
+  background-color: #3f4253;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #3fbef5;
+}
+
+.brand img.github-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul li a:hover {
+  color: #00a7b3;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  margin: 2px 0;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .navbar.active ul {
+    display: flex;
+  }
+}
+.links {
+  display: inline-flex; /* Link ve SVG ikonunu yatay olarak hizala */
+  align-items: center; /* Öğeleri dikey olarak hizala */
+  text-decoration: none;
+  color: #ffffff;
+}
+.links:hover {
+  color: #00a7b3;
+}
+
+.links svg {
+  width: 13.5px; /* SVG genişliği */
+  height: 13.5px; /* SVG yüksekliği */
+  margin-left: 5px; /* Link ile SVG arasındaki boşluk */
+}
+.link {
+  text-decoration: none;
+  color: orange;
+  display: inline-flex; /* Link ve SVG ikonunu yatay olarak hizala */
+  align-items: center; /* Öğeleri dikey olarak hizala */
+}
+
+.link:hover {
+  color: #00a7b3;
+  
+}
+
+.link svg {
+  width: 16px; /* SVG genişliği */
+  height: 16px; /* SVG yüksekliği */
+  margin-left: 4px; /* Link ile SVG arasındaki boşluk */
+  margin-right: 4px;
+}
+
+
+.content {
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  background-color: #3b3f54;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+}
+
+.article {
+  margin: 20px 0;
+}
